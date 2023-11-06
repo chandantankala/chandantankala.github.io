@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--
+    Plain-Academic by Vasilios Mavroudis
+    Released under the Simplified BSD License/FreeBSD (2-clause) License.
+    https://github.com/mavroudisv/plain-academic
+-->
+
+<html lang="en">
+<head>
+  <title>Projects </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+
+<!-- Navigation -->
+	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+	  <div class="container">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		  <ul class="nav navbar-nav">
+				  <li><a href="index.html">Home</a></li>
+				  <li><a href="Projects.html">Projects</a></li>
+				  <li><a href="#publications">Publications</a></li> 
+				  <li><a href="#">CV</a></li> 
+		  </ul>
+		</div>
+	  </div>
+	</nav>
+	
+	<!-- Projects Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Entries Column -->
+            <div class="col-md-8" style="height: 100vh;">
+                
+                <div style="margin-top:3%; text-align:justify;">             
+					<p>During my Ph.D., I have worked on the design and analysis of three Markov chains on discrete state spaces.
+					(1) is a puplished journal paper, papers (2) and (3) are expected to be submitted in November and December 2023.</p>
+					
+					<ol>
+						  <li><b>Mixing time of a non-reversible Markov chain on a hypercube. </b>
+						  <p> In this project, 
+						  we present a non-reversible Markov chain on the n-dimensional hypercube {0,1}^n which converges in order n steps. 
+						  Previously known Markov chains, which are reversible, converge in n log n steps. 
+						  This Markov chain alternates between random and deterministic moves, 
+						  and we prove that the chain also has a phase transition. 
+						  The deterministic moves correspond to a linear shift register. </p>
+						  </li>
+						  <li><b>Mixing time of a non-reversible Markov chain on a random graph.</b>
+						  <p>
+						  We present a non-reversible Markov chain on the cycle Z_n with additional random edges and show that it converges in 
+						  order log n steps with high probability. The random walk is shown to locally be approximated by an auxiliary process, 
+						  and when this auxiliary process reaches an appropriate entropic threshold, the original Markov chain converges. 
+						  Most of the previous examples are for reversible chains. One goal of this paper is to show that this idea works also 
+						  for a non-reversible chain. The other goal is to provide another context where the convergence behavior of a Markov chain 
+						  can be accelerated by the addition of additional (random) allowable transitions.
+						  </p>
+						  </li>
+						  <li><b>Mixing time of Hamiltonian Monte-Carlo Markov chain for the Ising model.</b>
+						  <p>
+						  We present a Hamiltonian Monte-Carlo Markov chain for the Ising model on a torus Z_n^d at high temperature and 
+						  show that it converges in order n log n steps. Hamiltonian Monte-Carlo Markov chains are most commonly applied for 
+						  continuous state spaces and have only recently been rigorously analyzed. One goal of this paper is to apply this Markov chain
+						  to a well studied discrete probability distribution, i.e. the Ising model. 
+						  The other other goal is to show the chain converges faster than traditional Markov chains for the Ising model, 
+						  like the Gibbs sampler, by at least a constant factor. 
+						  </p>
+						  </li>
+					</ol>
+                </div>
+            </div>

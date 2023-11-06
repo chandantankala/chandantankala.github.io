@@ -1,21 +1,101 @@
 <!DOCTYPE html>
-<html>
+<!--
+    Plain-Academic by Vasilios Mavroudis
+    Released under the Simplified BSD License/FreeBSD (2-clause) License.
+    https://github.com/mavroudisv/plain-academic
+-->
+
+<html lang="en">
+<head>
+  <title>Chandan Tankala</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+</head>
 <body>
-<img src="chandan3.jpg" width="100" height="100" alt="Chandan Tankala">
 
-<h1>Chandan Tankala</h1>
-<p>I am a fifth year Ph.D. student in Mathematics at University of Oregon. </p>
 
-<h2>Contact Information</h2>
-Email: chandant@uoregon.edu<br>
-Office: 204 Deady Hall
+<!-- Navigation -->
+	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+	  <div class="container">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+		</div>
 
-<h2>Research </h2>
-<p>I’m interested in the theory of MCMC and its applications in various fields of machine learning like deep learning,
-generative modeling, stochastic optimization.  </p> <br>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		  <ul class="nav navbar-nav">
+				  <li><a href="index.html">Home</a></li>
+				  <li><a href="Projects.html">Projects</a></li>
+				  <li><a href="Publications.html">Publications</a></li> 
+				  <li><a href="CV.html">CV</a></li> 
+		  </ul>
+		</div>
+	  </div>
+	</nav>
+  
+  <!-- Home Page Content -->
+    <div class="container">
 
-My Ph.D. advisor is <a href="https://pages.uoregon.edu/dlevin/"> David Levin </a> <br>
-<br>
+        <div class="row">
 
+            <!-- Entries Column -->
+            <div class="col-md-8" style="height: 100vh;">
+                
+                <!-- Main Image -->
+                <img class="img-responsive" src="chandan.jpg" alt="" width="300" height="300" ><br>
+                
+                <div style="margin-top:3%; text-align:justify;">                
+					<p>I am broadly interested in probability theory, stochastic processes and their applications to diverse fields such as theoretical computer science,
+					computational biology. My Ph.D. advisor is <a href="https://darkwing.uoregon.edu/~dlevin/">David A. Levin</a>.</p>
+					
+					<p>A focus area of my research is the analysis of the rate of convergence of ergodic Markov chains. During my Ph.D., 
+					I have analyzed non-reversible and Hamiltonian Monte-Carlo Markov chains. I have a keen interest in designing Markov chains that converge faster than
+					the state of the art, especially for state spaces that grow exponentially. I like using elegant coupling techniques, Fourier-transform based methods for 
+					the analysis of rate of convergence of these algorithms.</p>
+					
+					<p>On the applications front, I am interested in connections between Markov Chain Monte Carlo (MCMC) methods and reinforcement learning, stochastic optimization.
+					I would also like to explore other mathematical, statistical methods used in data science.</p>
+                </div>
+            </div> 
+			
+
+            <!-- Contact Info on the Sidebar -->
+            <div class="col-md-4">
+                <div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>Chandan Tankala</b></div><br>
+                <p><b>chandant@uoregon.edu</b><br>
+                <p>Department of Mathematics<br>
+                University of Oregon<br>
+                <!-- <br> -->
+                Eugene, Oregon <br>
+                USA <br>
+                </p>
+            </div>
+            
+            
+            <!-- Links on the Sidebar -->
+            <div class="col-md-4" style="margin-top:2%">
+              <dd><a href="https://scholar.google.com/citations?user=UIvz3A4AAAAJ&hl=en&oi=ao"> Google Scholar</a></dd> 
+              <!-- <dd><a href="#">Twitter</a></dd> -->
+              <dd><a href="https://www.linkedin.com/in/chandan-tankala-55309727b"> LinkedIn</a></dd>
+            </div>
+            
+        </div>
+
+    </div>
+    <!-- /.container -->
+    
+    <!-- <!-- Other people may like it too! --> -->
+    <!-- <a style="color:#b5bec9;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">Plain Academic</a>  -->
+    
 </body>
+
 </html>
