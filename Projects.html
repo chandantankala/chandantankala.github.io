@@ -52,7 +52,7 @@
                 
                 <div style="margin-top:3%; text-align:justify;">             
 					<p>During my Ph.D., I have worked on the design and analysis of three Markov chains on discrete state spaces.
-					(1) is a puplished journal paper, I expect paper (2) to submitted in November 2023, and paper (3) is in preparation.</p>
+					(1) is a puplished journal paper, I expect paper (2) to submitted in January 2024, and paper (3) is in preparation.</p>
 					
 					<ol>
 						  <li><b>Mixing time of a non-reversible Markov chain on a hypercube. </b>
@@ -75,12 +75,14 @@
 						  </li>
 						  <li><b>Mixing time of Hamiltonian Monte-Carlo Markov chain for the Ising model.</b>
 						  <p>
-						  We present a Hamiltonian Monte-Carlo Markov chain for the Ising model on a torus Z_n^d at high temperature and 
-						  show that it converges in order n log n steps. Hamiltonian Monte-Carlo Markov chains are most commonly applied for 
-						  continuous state spaces and have only recently been rigorously analyzed. One goal of this paper is to apply this Markov chain
-						  to a well studied discrete probability distribution, i.e. the Ising model. 
-						  The other other goal is to show the chain converges faster than traditional Markov chains for the Ising model, 
-						  like the Gibbs sampler, by at least a constant factor. 
+						  We present a Hamiltonian Monte-Carlo Markov chain to sample from the \emph{Ising model} on a square lattice, with $n$ points on a side, and show that it converges in $O(n\log n)$ steps at high temperature. 
+						  Hamiltonian Monte-Carlo Markov chains are most commonly applied for continuous state spaces and have only recently been rigorously analyzed.
+						  One goal of this paper is to apply this Markov chain in a continuous space for sampling from a 
+						  well-studied discrete probability distribution, namely the Ising model, using a projection. 
+						  It is worth emphasizing that the projection of the Markov chain onto the discrete lattice is not a Markov chain. 
+						  We prove, through the coupling of two Hamiltonian Monte Carlo Markov chains on the continuous space, that its projection converges in 
+						  O(n\log n) steps at high temperature. The other goal is to demonstrate an alternative to standard sampling algorithms for the Ising model, 
+						  such as the Gibbs and Metropolis-Hastings algorithms.
 						  </p>
 						  </li>
 					</ol>
