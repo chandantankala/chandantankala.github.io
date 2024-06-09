@@ -57,7 +57,9 @@
 					<ol>
 						  <li><b>Mixing time of a non-reversible Markov chain on a hypercube. </b>
 						  <p> In this project, 
-						  we present a non-reversible Markov chain on the n-dimensional hypercube 
+						  we present a non-reversible Markov chain on the <math>
+  <mi>n</mi>
+</math>-dimensional hypercube 
 <math>
   <mrow>
     <mo>{</mo>
@@ -72,12 +74,20 @@
   </mrow>
 </math>
  which converges in order n steps. 
-						  Previously known Markov chains, which are reversible, converge in n log n steps. 
+						  Previously known Markov chains, which are reversible, converge in <math>
+  <mrow>
+    <mi>n</mi>
+    <mo>&#x2061;</mo>
+    <mi>log</mi>
+    <mo>&#x2061;</mo>
+    <mi>n</mi>
+  </mrow>
+</math> steps. 
 						  This Markov chain alternates between random and deterministic moves, 
-						  and we prove that the chain also has a phase transition. 
+						  and we prove that the chain also has a cutoff. 
 						  The deterministic moves correspond to a linear shift register. </p>
 						  </li>
-						  <li><b>Mixing time of a non-reversible Markov chain on a random graph.</b>
+						  <li><b> Mixing time of a non-reversible Markov chain on a random graph.</b>
 						  <p>
 						  We present a non-reversible Markov chain on the cycle 
 <math>
@@ -91,7 +101,18 @@
   </mrow>
 </math>
  with additional random edges and show that it converges in 
-						  order log n steps with high probability. The random walk is shown to locally be approximated by an auxiliary process, 
+						  <math>
+  <mrow>
+    <mi>O</mi>
+    <mo>(</mo>
+    <mrow>
+      <mi>log</mi>
+      <mo>&#x2061;</mo>
+      <mi>n</mi>
+    </mrow>
+    <mo>)</mo>
+  </mrow>
+</math> steps with high probability. The random walk is shown to locally be approximated by an auxiliary process, 
 						  and when this auxiliary process reaches an appropriate entropic threshold, the original Markov chain converges. 
 						  Most of the previous examples are for reversible chains. One goal of this paper is to show that this idea works also 
 						  for a non-reversible chain. The other goal is to provide another context where the convergence behavior of a Markov chain 
@@ -102,9 +123,7 @@
 						  <p>
 						  We present a Hamiltonian Monte-Carlo Markov chain to sample from the Ising model on a complete graph of n vertices, and show that it converges in O((n-<math><mi>&delta;</mi></math>) log n) steps at high temperature. Hamiltonian Monte-Carlo Markov chains are most commonly applied for continuous state spaces and have only recently been rigorously analyzed. The main goal of this paper is to apply this Markov chain in a continuous space for sampling from a 
 						  well-studied discrete probability distribution, namely the Ising model, using a projection. 
-						  It is worth emphasizing that the projection of the Markov chain onto the discrete space is not a Markov chain. 
-						  We prove, through the coupling of two Hamiltonian Monte Carlo Markov chains on the continuous space, that its projection converges in 
-						  O((n-<math><mi>&delta;</mi></math>) log n) steps at high temperature.
+						  It is worth emphasizing that the projection of the Markov chain onto the discrete space is not a Markov chain.
 						  </p>
 						  </li>
 					</ol>
