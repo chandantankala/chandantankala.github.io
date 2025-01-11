@@ -4,10 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        :root {
+            --primary-color: #2563eb;
+            --text-color: #1f2937;
+            --bg-color: #ffffff;
+            --secondary-bg: #f3f4f6;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
         .container {
             max-width: 800px;
             margin: 2rem auto;
-            padding: 0 1rem;
+            padding: 0 1.5rem;
             font-family: system-ui, -apple-system, sans-serif;
             line-height: 1.6;
         }
@@ -15,54 +29,79 @@
         .profile-header {
             display: flex;
             align-items: flex-start;
-            gap: 2rem;
-            margin-bottom: 2rem;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: var(--secondary-bg);
+            border-radius: 12px;
         }
 
         .profile-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 8px;
+            width: 220px;
+            height: 220px;
+            border-radius: 12px;
             object-fit: cover;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 3px solid white;
         }
 
-        @media (max-width: 600px) {
-            .profile-header {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .profile-image {
-                width: 150px;
-                height: 150px;
-            }
-        }
-        
         .research-interests {
-            margin-bottom: 2rem;
+            flex: 1;
+        }
+
+        .research-interests p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .math-keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .keyword {
+            background-color: #e5edff;
+            color: var(--primary-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 16px;
+            font-size: 0.9rem;
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
         }
         
         .collaborations {
             margin-top: 2rem;
+            padding: 2rem;
+            background-color: var(--secondary-bg);
+            border-radius: 12px;
         }
         
         dt {
             font-weight: 600;
             margin-top: 1.5rem;
+            font-size: 1.1rem;
         }
         
         dd {
             margin-left: 0;
             margin-top: 0.5rem;
             margin-bottom: 1.5rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--primary-color);
         }
 
         .collaborator-link {
-            color: #2563eb;
+            color: var(--primary-color);
             text-decoration: none;
-            transition: color 0.2s ease;
+            transition: all 0.2s ease;
         }
 
         .collaborator-link:hover {
@@ -70,33 +109,70 @@
             text-decoration: underline;
         }
 
+        .affiliation {
+            font-size: 0.9rem;
+            color: #4b5563;
+            font-weight: normal;
+            margin-left: 0.5rem;
+        }
+
         .collaborator-link:focus {
-            outline: 2px solid #2563eb;
+            outline: 2px solid var(--primary-color);
             outline-offset: 2px;
+        }
+
+        @media (max-width: 600px) {
+            .profile-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 1.5rem;
+            }
+
+            .profile-image {
+                width: 180px;
+                height: 180px;
+            }
+
+            .math-keywords {
+                justify-content: center;
+            }
+
+            dd {
+                padding-left: 0.75rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-	<div class="container">
         <header class="profile-header">
             <img 
-                src="images/profile-photo.jpg" 
-                alt="Chandan Tankala" 
+                src="/images/profile-pic.jpg" 
+                alt="Your Name - Mathematics Ph.D. Student" 
                 class="profile-image"
             >
-        <section class="research-interests">
-            <p>I am a Ph.D. student in mathematics. My research interests broadly encompass probability theory and its applications in machine learning, with a particular focus on the analysis of sampling and optimization algorithms.</p>
-        </section>
+            <section class="research-interests">
+                <p>I am a Ph.D. student in mathematics. My research interests broadly encompass probability theory and its applications in machine learning, with a particular focus on the analysis of sampling and optimization algorithms.</p>
+                <div class="math-keywords">
+                    <span class="keyword">Probability Theory</span>
+                    <span class="keyword">Machine Learning</span>
+                    <span class="keyword">Optimization</span>
+                    <span class="keyword">Langevin Dynamics</span>
+                    <span class="keyword">Mean-Field Theory</span>
+                </div>
+            </section>
+        </header>
 
         <section class="collaborations">
-            <h2>Current Collaborations</h2>
+            <h2 class="section-title">Current Collaborations</h2>
             <dl>
                 <dt>
                     <a href="https://sites.google.com/view/kriznakumar/home" 
                        class="collaborator-link" 
                        target="_blank" 
                        rel="noopener noreferrer">Dr. Krishnakumar Balasubramanian</a>
+                    <span class="affiliation">University of California, Davis</span>
                 </dt>
                 <dd>We are working on developing and analyzing discrete Langevin dynamics to sample from classical energy-based models like the Ising and Potts model.</dd>
                 
@@ -105,13 +181,24 @@
                        class="collaborator-link" 
                        target="_blank" 
                        rel="noopener noreferrer">Dr. Dheeraj Nagaraj</a> 
+                    <span class="affiliation">Google DeepMind</span>
                     and 
                     <a href="https://anantrajml.github.io/" 
                        class="collaborator-link" 
                        target="_blank" 
                        rel="noopener noreferrer">Dr. Anant Raj</a>
+                    <span class="affiliation">Indian Institute of Science</span>
                 </dt>
                 <dd>We are working on analyzing an algorithm to sample from the mean-field Langevin dynamics using optimization in the space of probability measures. We also analyze applications to mean-field neural networks.</dd>
+
+                <dt>
+                    <a href="https://ix.cs.uoregon.edu/~lowd/" 
+                       class="collaborator-link" 
+                       target="_blank" 
+                       rel="noopener noreferrer">Dr. Daniel Lowd</a>
+                    <span class="affiliation">University of Oregon</span>
+                </dt>
+                <dd>We are working on applying probabilistic techniques for a differential privacy problem in educational settings.</dd>
             </dl>
         </section>
     </div>
