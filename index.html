@@ -59,6 +59,36 @@
             flex-wrap: wrap;
             gap: 0.5rem;
             margin-top: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .social-link:hover {
+            background-color: #f8fafc;
+            border-color: #d1d5db;
+            transform: translateY(-1px);
+        }
+
+        .social-icon {
+            font-size: 1.25rem;
         }
 
         .keyword {
@@ -160,6 +190,22 @@
                     <span class="keyword">Sampling</span>
                     <span class="keyword">Optimization</span>
                     <span class="keyword">Neural Networks</span>
+                </div>
+                <div class="social-links">
+                    <a href="https://scholar.google.com/citations?hl=en&user=UIvz3A4AAAAJ" 
+                       class="social-link" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        <span class="social-icon">📚</span>
+                        Google Scholar
+                    </a>
+                    <a href="https://www.linkedin.com/in/chandan-tankala-55309727b/" 
+                       class="social-link" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        <span class="social-icon">💼</span>
+                        LinkedIn
+                    </a>
                 </div>
             </section>
         </header>
