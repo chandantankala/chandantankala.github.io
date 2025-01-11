@@ -12,6 +12,34 @@
             line-height: 1.6;
         }
         
+        .profile-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 600px) {
+            .profile-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+        }
+        
         .research-interests {
             margin-bottom: 2rem;
         }
@@ -50,6 +78,13 @@
 </head>
 <body>
     <div class="container">
+	<div class="container">
+        <header class="profile-header">
+            <img 
+                src="images/profile-photo.jpg" 
+                alt="Chandan Tankala" 
+                class="profile-image"
+            >
         <section class="research-interests">
             <p>I am a Ph.D. student in mathematics. My research interests broadly encompass probability theory and its applications in machine learning, with a particular focus on the analysis of sampling and optimization algorithms.</p>
         </section>
