@@ -107,7 +107,7 @@
             border-bottom: 2px solid var(--primary-color);
         }
         
-        .collaborations {
+        .collaborations, .publications {
             margin-top: 2rem;
             padding: 2rem;
             background-color: var(--secondary-bg);
@@ -128,13 +128,13 @@
             border-left: 3px solid var(--primary-color);
         }
 
-        .collaborator-link {
+        .collaborator-link, .publication-link {
             color: var(--primary-color);
             text-decoration: none;
             transition: all 0.2s ease;
         }
 
-        .collaborator-link:hover {
+        .collaborator-link:hover, .publication-link:hover {
             color: #1d4ed8;
             text-decoration: underline;
         }
@@ -146,9 +146,33 @@
             margin-left: 0.5rem;
         }
 
-        .collaborator-link:focus {
+        .collaborator-link:focus, .publication-link:focus {
             outline: 2px solid var(--primary-color);
             outline-offset: 2px;
+        }
+
+        .publication-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .publication-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .publication-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-meta {
+            font-size: 0.9rem;
+            color: #4b5563;
+            margin-bottom: 0.5rem;
         }
 
         @media (max-width: 600px) {
@@ -242,9 +266,32 @@
                        rel="noopener noreferrer">Dr. Anant Raj</a>
                     <span class="affiliation">Indian Institute of Science</span>
                 </dt>
-                <dd>We are working on analyzing an algorithm to sample from the mean-field Langevin dynamics using optimization in the space of probability measures. We also analyze applications to mean-field neural networks.</dd>
+                <dd>We are working on analyzing a minimax optimization problem.</dd>
 
             </dl>
+        </section>
+
+        <!-- New Publications Section -->
+        <section class="publications">
+            <h2 class="section-title">Selected Publications</h2>
+            <div class="publication-item">
+                <div class="publication-title">
+                    <a href="https://arxiv.org/pdf/2503.13115" 
+                       class="publication-link" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        Beyond propagation of chaos: A stochastic algorithm for mean-field optimization
+                    </a>
+                </div>
+                <div class="publication-meta">
+                    <!-- You can add authors, year, venue, etc. here -->
+                    arXiv:2503.13115 [math.OC]
+                </div>
+                <p>
+                    <!-- You can add a brief description or abstract of the paper here -->
+                </p>
+            </div>
+            <!-- You can add more publications by duplicating the publication-item div -->
         </section>
     </div>
 </body>
