@@ -19,7 +19,7 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 2rem auto;
             padding: 0 1.5rem;
             font-family: system-ui, -apple-system, sans-serif;
@@ -175,6 +175,11 @@
             margin-bottom: 0.5rem;
         }
 
+        .publication-authors {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
         @media (max-width: 600px) {
             .profile-header {
                 flex-direction: column;
@@ -207,7 +212,7 @@
                 class="profile-image"
             >
             <section class="research-interests">
-                <p>I am a Ph.D. student in mathematics. I completed my MS at Texas A&M University, College Station. My research interests broadly encompass probability theory and its applications in machine learning, with a particular focus on the analysis of sampling and optimization algorithms. </p>
+                <p>I am a Ph.D. student in mathematics. I completed my MS at Texas A&M University, College Station. My research interests broadly encompass probability theory and its applications in machine learning, with a particular focus on the analysis of sampling and optimization algorithms. I'm particularly interested in how sampling algorithms can improve training and inference in neural networks by enabling more efficient exploration of complex probability distributions and posterior approximation.</p>
                 <div class="math-keywords">
                     <span class="keyword">Probability Theory</span>
                     <span class="keyword">Machine Learning</span>
@@ -243,13 +248,12 @@
                        target="_blank" 
                        rel="noopener noreferrer">Dr. Krishnakumar Balasubramanian</a>
                     <span class="affiliation">University of California, Davis</span>
-	            and
-		    <a href="https://zhouquan34.github.io/" 
+                    and
+                    <a href="https://zhouquan34.github.io/" 
                        class="collaborator-link" 
                        target="_blank" 
                        rel="noopener noreferrer">Dr. Quan Zhou</a>
                     <span class="affiliation">Texas A&M University, College Station</span>
-
                 </dt>
                 <dd>We are working on developing and analyzing discrete Langevin dynamics to sample from classical energy-based models like the Ising and Potts model.</dd>
                 
@@ -267,46 +271,30 @@
                     <span class="affiliation">Indian Institute of Science</span>
                 </dt>
                 <dd>We are working on analyzing a minimax optimization problem.</dd>
-
             </dl>
         </section>
 
-        <!-- New Publications Section -->
         <section class="publications">
             <h2 class="section-title">Publications</h2>
             <div class="publication-item">
-    <div class="publication-title">
-        Beyond propagation of chaos: A stochastic algorithm for mean-field optimization
-    </div>
-    <div class="publication-meta">
-        COLT 2025 · <a href="https://arxiv.org/pdf/2503.13115" 
-           class="publication-link" 
-           target="_blank" 
-           rel="noopener noreferrer">arXiv</a>:2503.13115 [math.OC]
-    </div>
-    <p>
-        <!-- You can add a brief description or abstract of the paper here -->
-    </p>
-</div>
+                <div class="publication-authors">
+                    Chandan Tankala, Dheeraj M Nagaraj, Anant Raj
+                </div>
+                <div class="publication-title">
+                    Beyond propagation of chaos: A stochastic algorithm for mean-field optimization
+                </div>
+                <div class="publication-meta">
+                    COLT 2025 • <a href="https://arxiv.org/pdf/2503.13115" 
+                       class="publication-link" 
+                       target="_blank" 
+                       rel="noopener noreferrer">arXiv</a>:2503.13115 [math.OC]
+                </div>
+                <p>
+                    <!-- You can add a brief description or abstract of the paper here -->
+                </p>
+            </div>
             <!-- You can add more publications by duplicating the publication-item div -->
-        </section><section class="publications">
-    <h2 class="section-title">Selected Publications</h2>
-    <div class="publication-item">
-        <div class="publication-title">
-            Beyond propagation of chaos: A stochastic algorithm for mean-field optimization
-        </div>
-        <div class="publication-meta">
-            Chandan Tankala, Dheeraj M Nagaraj, Anant Raj • COLT 2025 • <a href="https://arxiv.org/pdf/2503.13115" 
-               class="publication-link" 
-               target="_blank" 
-               rel="noopener noreferrer">arXiv</a>:2503.13115 [math.OC]
-        </div>
-        <p>
-            <!-- You can add a brief description or abstract of the paper here -->
-        </p>
-    </div>
-    <!-- You can add more publications by duplicating the publication-item div -->
-</section>
+        </section>
     </div>
 </body>
 </html>
