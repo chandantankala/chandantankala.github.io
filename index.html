@@ -61,7 +61,7 @@
         .header-card {
             background: var(--bg-white);
             border-radius: 20px;
-            padding: 3rem;
+            padding: 2.5rem;
             box-shadow: var(--shadow-lg);
             margin-bottom: 2rem;
             position: relative;
@@ -81,13 +81,15 @@
 
         .profile-section {
             display: grid;
-            grid-template-columns: 240px 1fr;
+            grid-template-columns: 280px 1fr;
             gap: 3rem;
             align-items: start;
         }
 
-        .profile-image-wrapper {
-            position: relative;
+        .profile-left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             animation: fadeIn 1s ease-out 0.2s both;
         }
 
@@ -98,6 +100,7 @@
             object-fit: cover;
             box-shadow: var(--shadow-xl);
             transition: transform 0.3s ease;
+            margin-bottom: 1.5rem;
         }
 
         .profile-image:hover {
@@ -126,24 +129,24 @@
         }
 
         .bio {
-            font-size: 1.05rem;
+            font-size: 1rem;
             color: var(--text-secondary);
-            margin-bottom: 2rem;
-            line-height: 1.8;
+            margin-bottom: 1rem;
+            line-height: 1.7;
         }
 
         /* Research Keywords */
         .keywords-section {
-            margin: 2rem 0;
+            margin: 1.5rem 0 0 0;
         }
 
         .keywords-title {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
             color: var(--text-light);
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
         }
 
         .keywords-grid {
@@ -188,27 +191,31 @@
             box-shadow: var(--shadow-md);
         }
 
-        /* Social Links */
+        /* Social Links - Now styled for vertical layout */
         .social-links {
             display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
+            flex-direction: column;
+            gap: 0.75rem;
+            width: 100%;
         }
 
         .social-link {
             display: inline-flex;
             align-items: center;
             gap: 0.75rem;
-            padding: 0.75rem 1.5rem;
+            padding: 0.6rem 1rem;
             background: var(--bg-white);
             border: 2px solid var(--border);
             border-radius: 12px;
             color: var(--text-primary);
             text-decoration: none;
             font-weight: 500;
+            font-size: 0.95rem;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            width: 100%;
+            justify-content: center;
         }
 
         .social-link::before {
@@ -244,8 +251,8 @@
         .content-card {
             background: var(--bg-white);
             border-radius: 20px;
-            padding: 2.5rem;
-            margin-bottom: 2rem;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
             box-shadow: var(--shadow-md);
             animation: slideUp 0.8s ease-out;
             position: relative;
@@ -263,12 +270,12 @@
         }
 
         .section-title {
-            font-size: 1.75rem;
+            font-size: 1.5rem;
             font-weight: 700;
             color: var(--text-primary);
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             position: relative;
-            padding-bottom: 1rem;
+            padding-bottom: 0.75rem;
         }
 
         .section-title::after {
@@ -433,20 +440,43 @@
             }
         }
 
-        /* Responsive Design */
+        /* Two-column layout for content sections */
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        @media (max-width: 968px) {
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
         @media (max-width: 768px) {
             .profile-section {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
 
-            .profile-image-wrapper {
+            .profile-left {
                 margin: 0 auto;
             }
 
             .profile-image {
                 width: 200px;
                 height: 200px;
+            }
+            
+            .social-links {
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            .social-link {
+                width: auto;
+                padding: 0.5rem 1rem;
             }
 
             .name-title {
@@ -455,11 +485,6 @@
 
             .keywords-grid {
                 justify-content: center;
-            }
-
-            .social-links {
-                justify-content: center;
-                flex-wrap: wrap;
             }
 
             .content-card {
@@ -475,53 +500,12 @@
         <!-- Header Section -->
         <header class="header-card">
             <div class="profile-section">
-                <div class="profile-image-wrapper">
+                <div class="profile-left">
                     <img 
                         src="./images/profile-photo.jpg" 
                         alt="Chandan Tankala" 
                         class="profile-image"
                     >
-                </div>
-                
-                <div class="profile-content">
-                    <h1 class="name-title">Chandan Tankala</h1>
-                    <p class="tagline">Researcher in Mathematical Foundations of AI</p>
-                    
-                    <p class="bio">
-                        I recently completed my Ph.D. in Mathematics at the University of Oregon under the supervision of 
-                        <a href="https://sites.google.com/view/kriznakumar/home" class="collaborator-link" target="_blank">Dr. Krishnakumar Balasubramanian</a>, 
-                        where I developed theoretical foundations for modern machine learning algorithms. 
-                        Prior to my doctoral studies, I earned my M.S. degree from Texas A&M University, advised by 
-                        <a href="https://geos.vt.edu/people/Everyone/Robert-Weiss.html" class="collaborator-link" target="_blank">Dr. Robert Weiss</a>. 
-                    </p>
-                    <p class="bio">
-                        My research lies at the intersection of artificial intelligence, statistics, and theoretical computer science. 
-                        During my doctoral research, I focused on developing theoretical foundations for sampling and optimization algorithms. 
-                        Currently, I am expanding my research portfolio to encompass generative AI and reinforcement learning, 
-                        while continuing to advance my work in algorithmic theory.
-                    </p>
-                    <p class="bio" style="margin-bottom: 2rem;">
-                        I actively collaborate with researchers across leading institutions, including 
-                        <a href="https://dheerajnagaraj.com/" class="collaborator-link" target="_blank">Dr. Dheeraj Nagaraj</a> at Google DeepMind, 
-                        <a href="https://anantrajml.github.io/" class="collaborator-link" target="_blank">Dr. Anant Raj</a> at the Indian Institute of Science, and 
-                        <a href="https://zhouquan34.github.io/" class="collaborator-link" target="_blank">Dr. Quan Zhou</a> at Texas A&M University, 
-                        working on sampling and optimization problems.
-                    </p>
-                    
-                    <div class="keywords-section">
-                        <p class="keywords-title">Research Areas</p>
-                        <div class="keywords-grid">
-                            <span class="keyword-tag">Probability Theory</span>
-                            <span class="keyword-tag">Stochastic Processes</span>
-                            <span class="keyword-tag">Optimization Theory</span>
-                            <span class="keyword-tag">Machine Learning Theory</span>
-                            <span class="keyword-tag">Sampling Algorithms</span>
-                            <span class="keyword-tag">Generative AI</span>
-                            <span class="keyword-tag">Reinforcement Learning</span>
-                            <span class="keyword-tag">Statistical Theory</span>
-                            <span class="keyword-tag">Applied Mathematics</span>
-                        </div>
-                    </div>
                     
                     <div class="social-links">
                         <a href="https://scholar.google.com/citations?hl=en&user=UIvz3A4AAAAJ" 
@@ -549,80 +533,124 @@
                         </a>
                     </div>
                 </div>
+                
+                <div class="profile-content">
+                    <h1 class="name-title">Chandan Tankala</h1>
+                    <p class="tagline">Researcher in Mathematical Foundations of AI</p>
+                    
+                    <p class="bio">
+                        I recently completed my Ph.D. in Mathematics at the University of Oregon under the supervision of 
+                        <a href="https://sites.google.com/view/kriznakumar/home" class="collaborator-link" target="_blank">Dr. Krishnakumar Balasubramanian</a>, 
+                        where I developed theoretical foundations for modern machine learning algorithms. 
+                        Prior to my doctoral studies, I earned my M.S. in Mathematics from Texas A&M University, advised by 
+                        <a href="https://geos.vt.edu/people/Everyone/Robert-Weiss.html" class="collaborator-link" target="_blank">Dr. Robert Weiss</a>. 
+                    </p>
+                    <p class="bio">
+                        My research lies at the intersection of artificial intelligence, statistics, and theoretical computer science. 
+                        During my doctoral research, I focused on developing theoretical foundations for sampling and optimization algorithms. 
+                        Currently, I am expanding my research portfolio to encompass generative AI and reinforcement learning, 
+                        while continuing to advance my work in algorithmic theory.
+                    </p>
+                    <p class="bio" style="margin-bottom: 2rem;">
+                        I actively collaborate with researchers across leading institutions, including 
+                        <a href="https://dheerajnagaraj.com/" class="collaborator-link" target="_blank">Dr. Dheeraj Nagaraj</a> at Google DeepMind, 
+                        <a href="https://anantrajml.github.io/" class="collaborator-link" target="_blank">Dr. Anant Raj</a> at the Indian Institute of Science, and 
+                        <a href="https://zhouquan34.github.io/" class="collaborator-link" target="_blank">Dr. Quan Zhou</a> at Texas A&M University, 
+                        working on problems ranging from minimax optimization to discrete sampling algorithms and Wasserstein gradient flows.
+                    </p>
+                    
+                    <div class="keywords-section">
+                        <p class="keywords-title">Research Areas</p>
+                        <div class="keywords-grid">
+                            <span class="keyword-tag">Probability Theory</span>
+                            <span class="keyword-tag">Stochastic Processes</span>
+                            <span class="keyword-tag">Optimization Theory</span>
+                            <span class="keyword-tag">Machine Learning Theory</span>
+                            <span class="keyword-tag">Sampling Algorithms</span>
+                            <span class="keyword-tag">Generative AI</span>
+                            <span class="keyword-tag">Reinforcement Learning</span>
+                            <span class="keyword-tag">Statistical Theory</span>
+                            <span class="keyword-tag">Applied Mathematics</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
 
-        <!-- Research Highlights -->
-        <section class="content-card">
-            <h2 class="section-title">Research Highlights</h2>
-            
-            <div class="collaboration-item">
-                <div class="collaborators">
-                    <span class="publication-badge">Google DeepMind Collaboration</span>
+        <!-- Content Wrapper for Side-by-Side Layout -->
+        <div class="content-wrapper">
+            <!-- Research Highlights -->
+            <section class="content-card">
+                <h2 class="section-title">Research Highlights</h2>
+                
+                <div class="collaboration-item">
+                    <div class="collaborators">
+                        <span class="publication-badge">Google DeepMind Collaboration</span>
+                    </div>
+                    <p class="collaboration-description">
+                        Working with <a href="https://dheerajnagaraj.com/" class="collaborator-link" target="_blank">Dr. Dheeraj Nagaraj</a> (Google DeepMind) 
+                        on mean-field optimization via interacting particle systems, developing novel stochastic algorithms 
+                        that go beyond traditional propagation of chaos methods with rigorous convergence guarantees.
+                    </p>
                 </div>
-                <p class="collaboration-description">
-                    Working with <a href="https://dheerajnagaraj.com/" class="collaborator-link" target="_blank">Dr. Dheeraj Nagaraj</a> (Google DeepMind) 
-                    on mean-field optimization via interacting particle systems, developing novel stochastic algorithms 
-                    that go beyond traditional propagation of chaos methods with rigorous convergence guarantees.
-                </p>
-            </div>
-            
-            <div class="collaboration-item">
-                <div class="collaborators">
-                    <span class="publication-badge">Stochastic Optimization Theory</span>
+                
+                <div class="collaboration-item">
+                    <div class="collaborators">
+                        <span class="publication-badge">Stochastic Optimization Theory</span>
+                    </div>
+                    <p class="collaboration-description">
+                        Developed novel stochastic algorithms for mean-field optimization that go beyond traditional propagation of chaos methods, 
+                        establishing rigorous convergence guarantees and concentration inequalities.
+                    </p>
                 </div>
-                <p class="collaboration-description">
-                    Developed novel stochastic algorithms for mean-field optimization that go beyond traditional propagation of chaos methods, 
-                    establishing rigorous convergence guarantees and concentration inequalities.
-                </p>
-            </div>
-            
-            <div class="collaboration-item">
-                <div class="collaborators">
-                    <span class="publication-badge">Distributional Memory for Generative AI</span>
+                
+                <div class="collaboration-item">
+                    <div class="collaborators">
+                        <span class="publication-badge">Distributional Memory for Generative AI</span>
+                    </div>
+                    <p class="collaboration-description">
+                        Extending dense associative memories from Euclidean space to the Wasserstein manifold of probability distributions,
+                        enabling principled storage and retrieval of Gaussian measures with applications to generative modeling 
+                        and uncertainty-aware computation. This framework bridges classical memory architectures with modern 
+                        generative AI by treating entire distributions as computational units.
+                    </p>
                 </div>
-                <p class="collaboration-description">
-                    Extending dense associative memories from Euclidean space to the Wasserstein manifold of probability distributions,
-                    enabling principled storage and retrieval of Gaussian measures with applications to generative modeling 
-                    and uncertainty-aware computation. This framework bridges classical memory architectures with modern 
-                    generative AI by treating entire distributions as computational units.
-                </p>
-            </div>
-        </section>
+            </section>
 
-        <!-- Publications -->
-        <section class="content-card">
-            <h2 class="section-title">Selected Publications</h2>
-            
-            <div class="publication-item">
-                <span class="publication-badge">COLT 2025</span>
-                <div class="publication-title">
-                    Beyond Propagation of Chaos: A Stochastic Algorithm for Mean-Field Optimization
+            <!-- Publications -->
+            <section class="content-card">
+                <h2 class="section-title">Selected Publications</h2>
+                
+                <div class="publication-item">
+                    <span class="publication-badge">COLT 2025</span>
+                    <div class="publication-title">
+                        Beyond Propagation of Chaos: A Stochastic Algorithm for Mean-Field Optimization
+                    </div>
+                    <div class="publication-authors">
+                        Chandan Tankala, Dheeraj M Nagaraj, Anant Raj
+                    </div>
+                    <div class="publication-venue">
+                        Conference on Learning Theory (COLT) 2025
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/pdf/2503.13115" class="pub-link" target="_blank">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                            </svg>
+                            Paper
+                        </a>
+                        <a href="https://arxiv.org/abs/2503.13115" class="pub-link" target="_blank">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M10.59,13.41C11,13.8 11,14.44 10.59,14.83C10.2,15.22 9.56,15.22 9.17,14.83C7.22,12.88 7.22,9.71 9.17,7.76L12.71,4.22C14.66,2.27 17.83,2.27 19.78,4.22C21.73,6.17 21.73,9.34 19.78,11.29L18.29,12.78C18.3,11.96 18.17,11.14 17.89,10.36L18.36,9.88C19.54,8.71 19.54,6.81 18.36,5.64C17.19,4.46 15.29,4.46 14.12,5.64L10.59,9.17C9.41,10.34 9.41,12.24 10.59,13.41M13.41,9.17C13.8,8.78 14.44,8.78 14.83,9.17C16.78,11.12 16.78,14.29 14.83,16.24L11.29,19.78C9.34,21.73 6.17,21.73 4.22,19.78C2.27,17.83 2.27,14.66 4.22,12.71L5.71,11.22C5.7,12.04 5.83,12.86 6.11,13.65L5.64,14.12C4.46,15.29 4.46,17.19 5.64,18.36C6.81,19.54 8.71,19.54 9.88,18.36L13.41,14.83C14.59,13.66 14.59,11.76 13.41,10.59C13,10.2 13,9.56 13.41,9.17Z"/>
+                            </svg>
+                            arXiv:2503.13115
+                        </a>
+                    </div>
                 </div>
-                <div class="publication-authors">
-                    Chandan Tankala, Dheeraj M Nagaraj, Anant Raj
-                </div>
-                <div class="publication-venue">
-                    Conference on Learning Theory (COLT) 2025
-                </div>
-                <div class="publication-links">
-                    <a href="https://arxiv.org/pdf/2503.13115" class="pub-link" target="_blank">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
-                        </svg>
-                        Paper
-                    </a>
-                    <a href="https://arxiv.org/abs/2503.13115" class="pub-link" target="_blank">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M10.59,13.41C11,13.8 11,14.44 10.59,14.83C10.2,15.22 9.56,15.22 9.17,14.83C7.22,12.88 7.22,9.71 9.17,7.76L12.71,4.22C14.66,2.27 17.83,2.27 19.78,4.22C21.73,6.17 21.73,9.34 19.78,11.29L18.29,12.78C18.3,11.96 18.17,11.14 17.89,10.36L18.36,9.88C19.54,8.71 19.54,6.81 18.36,5.64C17.19,4.46 15.29,4.46 14.12,5.64L10.59,9.17C9.41,10.34 9.41,12.24 10.59,13.41M13.41,9.17C13.8,8.78 14.44,8.78 14.83,9.17C16.78,11.12 16.78,14.29 14.83,16.24L11.29,19.78C9.34,21.73 6.17,21.73 4.22,19.78C2.27,17.83 2.27,14.66 4.22,12.71L5.71,11.22C5.7,12.04 5.83,12.86 6.11,13.65L5.64,14.12C4.46,15.29 4.46,17.19 5.64,18.36C6.81,19.54 8.71,19.54 9.88,18.36L13.41,14.83C14.59,13.66 14.59,11.76 13.41,10.59C13,10.2 13,9.56 13.41,9.17Z"/>
-                        </svg>
-                        arXiv:2503.13115
-                    </a>
-                </div>
-            </div>
-            
-            <!-- Add more publications here as they come -->
-        </section>
+                
+                <!-- Add more publications here as they come -->
+            </section>
+        </div>
     </div>
 </body>
 </html>
